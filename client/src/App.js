@@ -6,7 +6,7 @@ import Register from './pages/Register';
 import AdminDashboard from './pages/AdminDashboard';
 import DoctorDashboard from './pages/DoctorDashboard';
 import PatientDashboard from './pages/PatientDashboard';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';

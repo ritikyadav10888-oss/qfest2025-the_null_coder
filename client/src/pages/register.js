@@ -36,7 +36,7 @@ const Register = () => {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
-                            placeholder="John Doe"
+                            placeholder="Enter Your Name"
                         />
                     </div>
                     <div className="form-group">
@@ -46,7 +46,7 @@ const Register = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            placeholder="john@example.com"
+                            placeholder="Enter your email"
                         />
                     </div>
                     <div className="form-group">
@@ -65,7 +65,7 @@ const Register = () => {
                             type="text"
                             value={phoneNumber}
                             onChange={(e) => setPhoneNumber(e.target.value)}
-                            placeholder="+1234567890"
+                            placeholder="Enter your number"
                             required
                         />
                     </div>
