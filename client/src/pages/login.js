@@ -27,22 +27,17 @@ const Login = () => {
         }
     };
 
-    return ( <
-        div style = {
+    return ( <div style = {
             { display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' } } >
-        <
-        div className = "card"
+        <div className = "card"
         style = {
             { width: '100%', maxWidth: '400px' } } >
-        <
-        h2 style = {
-            { textAlign: 'center', marginBottom: '1.5rem', color: 'var(--primary)' } } >
-        Welcome Back <
-        /h2>
+        <h2 style = {
+            { textAlign: 'center', marginBottom: '1.5rem', color: 'var(--primary)', fontSize: '1.9rem' } } >
+        Login </h2>
 
         {
-            error && ( <
-                div style = {
+            error && ( <div style = {
                     {
                         backgroundColor: '#fee2e2',
                         color: '#b91c1c',
@@ -51,62 +46,55 @@ const Login = () => {
                         marginBottom: '1rem',
                         fontSize: '0.9rem'
                     }
-                } > { error } <
-                /div>
+                } > { error } </div>
             )
         }
 
-        <
-        form onSubmit = { handleSubmit } >
-        <
-        div className = "form-group" >
-        <
-        label htmlFor = "email" > Email Address < /label> <
-        input id = "email"
+        <form onSubmit = { handleSubmit } >
+        <div className = "form-group" >
+        <label htmlFor = "email" > Email Address </label> <input id = "email"
         type = "email"
         value = { email }
         onChange = {
             (e) => setEmail(e.target.value) }
-        required placeholder = "Enter your email" /
-        >
-        <
-        /div>
+        required placeholder = "Enter your email" />
+        </div>
 
-        <
-        div className = "form-group" >
-        <
-        label htmlFor = "password" > Password < /label> <
-        input id = "password"
+        <div className = "form-group" >
+        <label htmlFor = "password" > Password </label> <input id = "password"
         type = "password"
         value = { password }
         onChange = {
             (e) => setPassword(e.target.value) }
-        required placeholder = "Enter your password" /
-        >
-        <
-        /div>
+        required placeholder = "Enter your password" />
+        </div>
 
-        <
-        button type = "submit"
+          <div style={{ marginTop: '0.75rem', textAlign: 'right' }}>
+        <a
+            href="/forgot-password"
+            style={{ color: 'var(--primary)', fontSize: '0.85rem', textDecoration: 'none' }}>
+            Forgot Password?
+        </a>
+        </div>
+
+        <button type = "submit"
         className = "btn btn-primary"
         style = {
             { width: '100%', marginTop: '0.5rem' } } >
-        Login <
-        /button> <
-        /form>
+        Login </button> </form>
 
-        <
-        div style = {
+
+        <div style = {
             { marginTop: '1rem', textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)' } } >
-        Don’ t have an account ? { ' ' } <
-        a href = "/register"
+        Don’ t have an account ? { ' ' } 
+        <a href = "/register"
         style = {
             { color: 'var(--primary)', textDecoration: 'none', fontWeight: '500' } } >
-        Sign up <
-        /a> <
-        /div> <
-        /div> <
-        /div>
+        Signup Now</a> 
+        </div> 
+
+        </div> 
+        </div>
     );
 };
 

@@ -11,25 +11,22 @@ const Navbar = () => {
         navigate('/login');
     };
 
-    return ( <
-        nav className = "navbar"
+    return ( <nav className = "navbar"
         style = {
             { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 2rem' } } >
-        <
-        Link to = "/"
-        className = "navbar-brand" > MediCare < /Link> <
-        ul className = "nav-links" >
+        <Link to = "/"
+        className = "navbar-brand" > MediCare </Link> <ul className = "nav-links">
 
         {
             user ? ( <
                 >
                 <
-                li > < span className = "nav-link" > Hello, { user.name }({ user.role }) < /span></li > { user.role === 'admin' && < li > < Link to = "/admin"
-                    className = "nav-link" > Dashboard < /Link></li > } { user.role === 'doctor' && < li > < Link to = "/doctor"
-                    className = "nav-link" > Dashboard < /Link></li > } { user.role === 'patient' && < li > < Link to = "/patient"
-                    className = "nav-link" > Dashboard < /Link></li > } <
+                li > <span className = "nav-link" > Hello, { user.name }({ user.role }) < /span></li > { user.role === 'admin' && < li > < Link to = "/admin"
+                    className = "nav-link" > Dashboard </Link></li > } { user.role === 'doctor' && < li > < Link to = "/doctor"
+                    className = "nav-link" > Dashboard </Link></li > } { user.role === 'patient' && < li > < Link to = "/patient"
+                    className = "nav-link" > Dashboard </Link></li > } <
                 li > < button onClick = { handleLogout }
-                className = "btn btn-secondary" > Logout < /button></li >
+                className = "btn btn-secondary" > Logout </button></li >
                 <
                 />
             ) : ( <
