@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useContext } from 'react';
 import AuthContext, { AuthProvider } from './context/AuthContext';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Login from './pages/login';
+import Register from './pages/register';
 import AdminDashboard from './pages/AdminDashboard';
 import DoctorDashboard from './pages/DoctorDashboard';
 import PatientDashboard from './pages/PatientDashboard';
