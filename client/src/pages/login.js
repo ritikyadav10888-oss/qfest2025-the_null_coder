@@ -17,47 +17,96 @@ const Login = () => {
         }
     }, [user, navigate]);
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
         const result = await login(email, password);
         if (!result.success) {
             setError(result.error);
+        } else {
+            setError('');
         }
     };
 
-    return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' }}>
-            <div className="card" style={{ width: '100%', maxWidth: '400px' }}>
-                <h2 style={{ textAlign: 'center', marginBottom: '1.5rem', color: 'var(--primary)' }}>Welcome Back</h2>
-                {error && <div style={{ backgroundColor: '#fee2e2', color: '#b91c1c', padding: '0.75rem', borderRadius: '0.5rem', marginBottom: '1rem', fontSize: '0.9rem' }}>{error}</div>}
-                <form onSubmit={handleSubmit}>
-                    <div className="form-group">
-                        <label>Email Address</label>
-                        <input
-                            type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                            placeholder="Enter your email"
-                        />
-                    </div>
-                    <div className="form-group">
-                        <label>Password</label>
-                        <input
-                            type="password"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            required
-                            placeholder="Enter your password"
-                        />
-                    </div>
-                    <button type="submit" className="btn btn-primary" style={{ width: '100%', marginTop: '0.5rem' }}>Login</button>
-                </form>
-                <div style={{ marginTop: '1rem', textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                    Don't have an account? <a href="/register" style={{ color: 'var(--primary)', textDecoration: 'none', fontWeight: '500' }}>Sign up</a>
-                </div>
-            </div>
-        </div>
+    return ( <
+        div style = {
+            { display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '80vh' } } >
+        <
+        div className = "card"
+        style = {
+            { width: '100%', maxWidth: '400px' } } >
+        <
+        h2 style = {
+            { textAlign: 'center', marginBottom: '1.5rem', color: 'var(--primary)' } } >
+        Welcome Back <
+        /h2>
+
+        {
+            error && ( <
+                div style = {
+                    {
+                        backgroundColor: '#fee2e2',
+                        color: '#b91c1c',
+                        padding: '0.75rem',
+                        borderRadius: '0.5rem',
+                        marginBottom: '1rem',
+                        fontSize: '0.9rem'
+                    }
+                } > { error } <
+                /div>
+            )
+        }
+
+        <
+        form onSubmit = { handleSubmit } >
+        <
+        div className = "form-group" >
+        <
+        label htmlFor = "email" > Email Address < /label> <
+        input id = "email"
+        type = "email"
+        value = { email }
+        onChange = {
+            (e) => setEmail(e.target.value) }
+        required placeholder = "Enter your email" /
+        >
+        <
+        /div>
+
+        <
+        div className = "form-group" >
+        <
+        label htmlFor = "password" > Password < /label> <
+        input id = "password"
+        type = "password"
+        value = { password }
+        onChange = {
+            (e) => setPassword(e.target.value) }
+        required placeholder = "Enter your password" /
+        >
+        <
+        /div>
+
+        <
+        button type = "submit"
+        className = "btn btn-primary"
+        style = {
+            { width: '100%', marginTop: '0.5rem' } } >
+        Login <
+        /button> <
+        /form>
+
+        <
+        div style = {
+            { marginTop: '1rem', textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)' } } >
+        Don’ t have an account ? { ' ' } <
+        a href = "/register"
+        style = {
+            { color: 'var(--primary)', textDecoration: 'none', fontWeight: '500' } } >
+        Sign up <
+        /a> <
+        /div> <
+        /div> <
+        /div>
     );
 };
 
